@@ -1,0 +1,50 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>88a57380-0b2e-4e8e-85bd-8b1b961a90e6</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>MyfileEncryptRSA.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>CECS 378 File Encryption</Name>
+    <RootNamespace>CECS 378 File Encryption</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="CECS_378_File_Encryption.py" />
+    <Compile Include="Myencrypt.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyencryptMAC.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyfileEncrypt.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyfileEncryptMAC.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyfileEncryptRSA.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
